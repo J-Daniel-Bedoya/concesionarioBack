@@ -11,42 +11,45 @@ const Vehicle = db.define(
       autoIncrement: true,
       allowNull: false,
     },
-    name: {
+    tipo: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    price: {
-      type: DataTypes.INTEGER,
+    modelo: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    image: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
+    color: {
+      type: DataTypes.JSON,
       allowNull: true,
     },
-    description: {
+    kilometraje: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    precio: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    esNuevo: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+      allowNull: false,
+      field: "es_nuevo"
+    },
+    img: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    availableQty: {
+    cilindraje: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: "available_qty",
     },
-    status: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false,
-      allowNull: false,
-    },
-    categoryId: {
+    numVelocidades: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: "category_id",
+      field: "num_velocidades",
     },
-    userId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      field: "user_id",
-    }
   }, {
     timestamps: false,
   }

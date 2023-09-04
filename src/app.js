@@ -3,11 +3,14 @@ const morgan = require('morgan');
 const cors = require("cors");
 const db = require('./utils/database');
 const handleError = require("./middlewares/error");
+const initModels = require('./models/initmodels.models');
 
 const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors());  
+
+initModels()
 
 db.authenticate()
   .then(() => console.log('Autenticación exitosa'))

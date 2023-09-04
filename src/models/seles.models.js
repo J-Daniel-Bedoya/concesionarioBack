@@ -2,8 +2,8 @@ const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
 
 
-const Price = db.define(
-  "price",
+const Seles = db.define(
+  "seles",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,17 +11,23 @@ const Price = db.define(
       autoIncrement: true,
       allowNull: false,
     },
-    modelo: {
+    compradorId: {
       type: DataTypes.STRING,
       allowNull: false,
+      field: "comprador_id"
     },
-    precio: {
+    vehicleId: {
       type: DataTypes.STRING,
       allowNull: false,
+      field: "vehicle_id"
+    },
+    fechaCompra: {
+      type: DataTypes.JSON,
+      allowNull: true,
     },
   }, {
     timestamps: false,
   }
 );
 
-module.exports = Price;
+module.exports = Seles;

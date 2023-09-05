@@ -27,10 +27,10 @@ app.get('/', (req, res) => {
 }); 
 
 app.use('/api/v1', usersRoutes)
-// app.use('api/v1', priceRoutes)
-// app.use('api/v1', vehiclesRoutes)
-// app.use('api/v1', salesRoutes)
-// app.use('api/v1', buyersRoutes)
+// app.use('/api/v1', priceRoutes)
+// app.use('/api/v1', vehiclesRoutes)
+// app.use('/api/v1', salesRoutes)
+app.use('/api/v1', buyersRoutes)
 
   
 app.use(handleError);

@@ -25,7 +25,6 @@ const Buyers = db.define(
       allowNull: false,
       field: "numero_documento"
     },
-
   }, {
     timestamps: false,
   }

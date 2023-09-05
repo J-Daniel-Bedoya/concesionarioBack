@@ -1,8 +1,15 @@
-const {Sales, Vehicles} = require('../models');
-
-
+const { Sales } = require("../models");
 
 class SalesServices {
+    
+    static async create (sale) {
+        try {
+            const result = await Sales.create(sale);
+            return result
+        } catch (error) {
+            throw(error);
+        };
+    }
 
     static async salesGet() {
         try {
@@ -23,14 +30,6 @@ class SalesServices {
         };
     };
 
-    static async salePost (newsale) {
-        try {
-            const result = await Sales.create(newsale);
-            return result;
-        } catch (error) {
-            throw(error);
-        };
-    };
     static async salePatch (id, body) {
         try {
             const sale = await Sales.findOne({where: {id}});

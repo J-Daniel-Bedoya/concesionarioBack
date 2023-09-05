@@ -28,19 +28,6 @@ const getBuyer = async (req, res, next) => {
         })
     }
 }
-const createBuyer = async (req, res, next) => {
-    try {
-        const newBuyer = req.body;
-        const result = await BuyersServices.buyerPost(newBuyer);
-        res.status(201).json(result);
-    } catch (error) {
-        next({
-            status: 400,
-            errorContent: error,
-            message: "Faltan datos"
-        })
-    }
-}
 const updateBuyer = async (req, res, next) => {
     try {
         const {id} = req.params;
@@ -73,7 +60,6 @@ const deleteBuyer = async (req, res, next) => {
 module.exports = {
     getBuyers,
     getBuyer,
-    createBuyer,
     updateBuyer,
     deleteBuyer
 }

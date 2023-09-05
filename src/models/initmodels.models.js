@@ -1,27 +1,16 @@
-<<<<<<< HEAD
-const Buyers = require('./buyers.models');
-const Users = require('./users.models')
+
+const { Buyers, Price, Sales, Users, Vehicles } = require("./index");
 
 const initModels = () => {
-    Users;
-    Buyers;
-}
+console.log("hola");
+    // Sales.belongsTo(Vehicles, {as: "sales", foreignKey: "vehicles_id"})
+    // Vehicles.hasMany(Sales, {as: "vehicles", foreignKey: "vehicles_id"})
 
-module.exports = initModels
-=======
-const { Buyers, Price, Seles, Users, Vehicle } = require("./index");
+    // Sales.belongsTo(Buyers, {as: "buyer", foreignKey: "saleMade_id"})
+    // Buyers.hasMany(Sales, {as: "saleMade", foreignKey: "saleMade_id"})
 
-const initModels = () => {
-
-
-    Seles.belongsTo(Vehicle, {as: "seles", foreignKey: "vehicles_id"})
-    Vehicle.hasMany(Seles, {as: "vehicles", foreignKey: "vehicles_id"})
-
-    Seles.belongsTo(Buyers, {as: "buyer", foreignKey: "seleMade_id"})
-    Buyers.hasMany(Seles, {as: "seleMade", foreignKey: "seleMade_id"})
-
-    Vehicle.belongsTo(Price, {as: "vehicle", foreignKey: "vihicle_id"})
-    Price.hasMany(Vehicle, {as: "price", foreignKey: "vihicle_id"})
+    // Vehicles.belongsTo(Price, {as: "vehicle", foreignKey: "vehicles_id"})
+    // Price.hasMany(Vehicles, {as: "price", foreignKey: "vehicles_id"})
 
   // U:M
 
@@ -62,4 +51,3 @@ const initModels = () => {
 };
 
 module.exports = initModels;
->>>>>>> 5706be64ad3595dc9b4b0017b96656914eb60b9b

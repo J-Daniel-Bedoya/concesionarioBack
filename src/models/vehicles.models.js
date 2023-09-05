@@ -3,17 +3,17 @@ const { DataTypes } = require("sequelize");
 
 
 const Vehicles = db.define('Vehicles', {
-  vehicleID: {
+  vehiclesID: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
     allowNull: false,
+    field:"vehicles_id"
   },
   tipo: {
-    type: DataTypes.ENUM("moto", "car"),
+    type: DataTypes.ENUM("moto", "carro"),
     allowNull: false,
     defaultValue: "carro",
-    comment: 'posible valor: "carro" o "moto"',
   },
   modelo: {
     type: DataTypes.STRING(100),

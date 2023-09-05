@@ -16,10 +16,10 @@ const Sales = db.define(
       allowNull: false,
       field: "comprador_id"
     },
-    vehicleId: {
+    vehiclesId: {
       type: DataTypes.STRING,
       allowNull: false,
-      field: "vehicle_id"
+      field: "vehicles_id"
     },
     fechaCompra: {
       type: DataTypes.JSON,

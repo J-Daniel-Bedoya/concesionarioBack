@@ -1,6 +1,3 @@
-const db = require("../utils/database");
-const { DataTypes } = require("sequelize");
-
 /**
  * @openapi
  * components:
@@ -33,27 +30,3 @@ const { DataTypes } = require("sequelize");
  *           type: string
  *           example: Elemento eliminado correctamente
  */
-
-const Price = db.define(
-  "price",
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-      allowNull: false
-    },
-    modelo: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    precio: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    }
-  }, {
-    timestamps: false,
-  }
-);
-
-module.exports = Price;

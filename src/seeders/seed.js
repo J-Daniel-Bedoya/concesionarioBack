@@ -44,16 +44,16 @@ const vehicles = [
     },    
 ]
 
-// const sales = [
-//     {
-//        vehicleId: 1,
-//        buyerId: 1,
-//     },    
-//     {
-//        vehicleId: 2,
-//        buyerId: 1,
-//     },    
-// ]
+const sales = [
+    {
+       vehicleId: 1,
+       buyerId: 1,
+    },    
+    {
+       vehicleId: 2,
+       buyerId: 1,
+    },    
+]
 
 const price = [
     {
@@ -81,7 +81,7 @@ db.sync({force:true})
         setTimeout(() => {
             buyers.forEach(async (buyer)=> await Buyers.create(buyer))
         }, 300);
-        // setTimeout(() => {
-        //     sales.forEach(async (sale)=> await Sales.create(sale))
-        // }, 400);
+        setTimeout(() => {
+            sales.forEach(async (sale)=> await Sales.create(sale))
+        }, 400);
     })

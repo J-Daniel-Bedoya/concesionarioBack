@@ -1,6 +1,7 @@
 const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
 const Price = require("./price.models");
+const Sales = require("./sales.models");
 
 
 const Vehicles = db.define('vehicles', {
@@ -46,13 +47,9 @@ const Vehicles = db.define('vehicles', {
     },
     comment: 'Valor mayor o igual a 0',
   },
-  priceId: {
+  precio: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    field: "price_id",
-    references: {
-      model: Price
-    },
     validate: {
       min: {
         args: [0],
@@ -92,7 +89,6 @@ const Vehicles = db.define('vehicles', {
     },
     comment: 'Número de velocidades de la moto (máximo 6)',
   },
-
 }, {
   timestamps: false,
 })

@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const cors = require("cors");
 const db = require('./utils/database');
 const handleError = require("./middlewares/error");
-const initModels = require("./models/init-Models.models");
+const initModels = require("./models/initModels.models");
 
 const app = express();
 app.use(express.json());
@@ -16,7 +16,7 @@ db.authenticate()
   .then(() => console.log('Autenticación exitosa'))
   .catch((err) => console.log(err))
   
-db.sync({ alter: true })
+db.sync({ force: true })
   .then(() => console.log('Conexión exitosa'))
   .catch((err) => console.log(err))
   

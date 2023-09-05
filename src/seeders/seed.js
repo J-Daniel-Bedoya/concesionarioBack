@@ -1,6 +1,6 @@
 const db = require("../utils/database")
 const {Buyers, Price, Vehicles, Sales, Users} = require("../models")
-const initModels = require("../models/initmodels.models")
+const initModels = require("../models/initModels.models")
 
 initModels()
 

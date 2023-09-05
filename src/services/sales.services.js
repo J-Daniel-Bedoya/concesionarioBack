@@ -6,19 +6,7 @@ class SalesServices {
 
     static async salesGet() {
         try {
-            const vehiclesData = await Vehicles.findAll();
-            const result = await Sales.findAll({
-                attributes: {
-                    exclude: ["buyer_id", "vihicle_id"]
-                },
-                include: {
-                    model: vehiclesData,
-                    // as: "vehicleId",
-                    // attributes: {
-                    //     exclude: Vehicles.tipo === "carro" && ["cilindraje", "numVelocidades"]
-                    // }
-                }
-            });
+            const result = await Sales.findAll();
             return result;
         } catch (error) {
             throw(error);

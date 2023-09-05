@@ -3,23 +3,23 @@ const { DataTypes } = require("sequelize");
 
 
 const Sales = db.define(
-  "Sales",
+  "sales",
   {
-    compraID: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       allowNull: false,
     },
-    compradorId: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      field: "comprador_id"
-    },
     vehiclesId: {
       type: DataTypes.STRING,
       allowNull: false,
       field: "vehicles_id"
+    },
+    buyersId: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      field: "buyers_id"
     },
     fechaCompra: {
       type: DataTypes.JSON,

@@ -3,6 +3,8 @@ const { Buyers, Price, Sales, Users, Vehicles } = require("./index");
 
 const initModels = () => {
 console.log("hola");
+    Vehicles.hasOne(Buyers, {through: "Sales"});
+    Buyers.belongsTo(Vehicles, {through: "Sales"});
     // Sales.belongsTo(Vehicles, {as: "sales", foreignKey: "vehicles_id"})
     // Vehicles.hasMany(Sales, {as: "vehicles", foreignKey: "vehicles_id"})
 

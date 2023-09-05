@@ -1,7 +1,5 @@
 const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
-const Price = require("./price.models");
-const Sales = require("./sales.models");
 
 
 const Vehicles = db.define('vehicles', {
@@ -14,10 +12,6 @@ const Vehicles = db.define('vehicles', {
   tipo: {
     type: DataTypes.STRING,
     allowNull: false,
-  },
-  fechaRegistro: {
-    type: DataTypes.STRING,
-    allowNull: false
   },
   modelo: {
     type: DataTypes.STRING(100),
@@ -47,19 +41,6 @@ const Vehicles = db.define('vehicles', {
     },
     comment: 'Valor mayor o igual a 0',
   },
-  precio: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    validate: {
-      min: {
-        args: [0],
-        msg: 'El precio debe ser mayor o igual a 0.',
-      },
-      max:{
-        args: [250000000]
-      }
-    },
-  },
   cilindraje: {
     type: DataTypes.INTEGER,
     validate: {
@@ -88,6 +69,23 @@ const Vehicles = db.define('vehicles', {
       },
     },
     comment: 'Número de velocidades de la moto (máximo 6)',
+  },
+  precio: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    validate: {
+      min: {
+        args: [0],
+        msg: 'El precio debe ser mayor o igual a 0.',
+      },
+      max:{
+        args: [250000000]
+      }
+    },
+  },
+  fechaRegistro: {
+    type: DataTypes.STRING,
+    allowNull: false
   },
 }, {
   timestamps: false,

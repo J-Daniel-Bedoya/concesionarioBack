@@ -45,6 +45,14 @@ class VehiclesServices {
             throw(error);
         };
     };
+    static async getMatches (data) {
+        try {
+            const result = await Vehicles.findAll({where: {...data}});
+            return result;
+        } catch (error) {
+            throw(error);
+        };
+    };
 }
 
 module.exports = VehiclesServices

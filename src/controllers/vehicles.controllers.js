@@ -98,11 +98,28 @@ const sellVehicle = async (req, res, next)=> {
     };
 };
 
+const sumVehicles = async (req, res, next)=> {
+    try {
+        const data = req.body
+        const result = await VehiclesServices.getMatches(data);
+        const sum = result.reduce((total, vehicle) => {
+            return total + vehicle.precio;
+          }, 0)
+        res.status(200).json({sum, result});
+    } catch (error) {
+        next({
+            status: 400,
+            errorContent: error,
+            message: "Can't find info"
+        })
+    };
+};
 module.exports = {
   getVehicles,
   getVehicle,
   createVehicle,
   editVehicle,
   deleteVehicle,
-  sellVehicle
+  sellVehicle,
+  sumVehicles
 };

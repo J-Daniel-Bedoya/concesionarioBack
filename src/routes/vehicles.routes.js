@@ -1,6 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const { getVehicles, getVehicle, createVehicle, editVehicle, deleteVehicle, sellVehicle } = require("../controllers");
+const { 
+    getVehicles, 
+    getVehicle, 
+    createVehicle, 
+    editVehicle, 
+    deleteVehicle, 
+    sellVehicle,
+    sumVehicles,
+} = require("../controllers");
 
 
 
@@ -10,5 +18,6 @@ router.post("/vehicles", createVehicle);
 router.patch("/vehicles/:id", editVehicle);
 router.delete("/vehicles/:id", deleteVehicle);
 router.post("/vehicles/:id/sale", sellVehicle);
+router.post("/vehicles/sum", sumVehicles);
 
 module.exports = router;

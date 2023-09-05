@@ -5,68 +5,33 @@ const { DataTypes } = require("sequelize");
  * @openapi
  * components:
  *   schemas:
- *     users:
+ *     price:
  *       type: object
  *       properties:
  *         id:
  *           type: number
  *           example: 1
- *         email:
+ *         modelo:
  *           type: string
- *           example: josedaniel37@gmail.com
- *         password:
+ *           example: "2024 HR-V"
+ *         precio:
  *           type: string
- *           example: 1234
- *     register:
+ *           example: 234000
+ *     createPrice:
  *       type: object
  *       properties:
- *         email:
+ *         modelo:
  *           type: string
- *           example: josedaniel37@gmail.com
- *         password:
+ *           example: "2024 HR-V"
+ *         precio:
  *           type: string
- *           example: 1234
- *     login:
- *       type: object
- *       properties:
- *         email:
- *           type: string
- *           example: josedaniel37@gmail.com
- *         password:
- *           type: string
- *           example: 1234
- *     request_auth:
- *       type: object
- *       properties:
- *         id:
- *           type: number
- *           example: 1
- *         email:
- *           type: string
- *           example: josedaniel37@gmail.com
- *         token:
- *           type: string
- *           example: "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2VkYW5pZWxAZ21haWwuY29tIiwiaWQiOjQsImlhdCI6"
- *     request_logout:
+ *           example: 234000
+ *     deletePrice:
  *       type: object
  *       properties:
  *         message: 
  *           type: string
- *           example: Usuario eliminado con exito
- *     logout:
- *       type: object
- *       properties:
- *         email: 
- *           type: string
- *           example: josedaniel37@gmail.com
- *         password: 
- *           type: string
- *           example: 1234
- *   securitySchemes:
- *     bearerAuth:
- *       type: http
- *       scheme: Bearer
- *       bearerFormat: JWT
+ *           example: Elemento eliminado correctamente
  */
 
 const Price = db.define(

@@ -7,10 +7,10 @@ const { userRegister} = require("../controllers");
  * @openapi
  * /api/v1/users:
  *   post:
- *     summary: Register a new user in the app
+ *     summary: Registrar un nuevo usuario
  *     tags: [Users]
  *     requestBody:
- *       description: To register a new user you need a username, email and password
+ *       description: Este es un ejemplo de los datos que debes colocar
  *       required: true
  *       content:
  *         application/json:

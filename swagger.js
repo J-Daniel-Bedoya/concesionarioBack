@@ -26,7 +26,6 @@ const options = {
     
     "./src/routes/vehicles.routes.js",
     "./src/models/vehicles.models.js",
-    "./src/models/productInCart.models.js",
 
     "./src/routes/sales.routes.js",
     "./src/models/sales.models.js",

@@ -3,7 +3,7 @@ const { getPrices, getPrice , createPrice, updatePrice, deletePrice } = require(
 const { getSales, getSale, registerSale } = require('./sales.controllers');
 const { userRegister } = require('./users.controllers');
 const { authUser } = require('./auth.controllers');
-const { getVehicles,getVehicle, createVehicle, editVehicles, deleteVehicle } = require("./vehicles.controllers");
+const { getVehicles,getVehicle, createVehicle, editVehicle, deleteVehicle } = require("./vehicles.controllers");
 
 
 module.exports = {
@@ -12,5 +12,5 @@ module.exports = {
     getSales, getSale, registerSale,
     userRegister,
     authUser,
-    getVehicles,getVehicle, createVehicle, editVehicles, deleteVehicle,
+    getVehicles,getVehicle, createVehicle, editVehicle, deleteVehicle,
 }

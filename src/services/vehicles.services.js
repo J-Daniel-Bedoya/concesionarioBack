@@ -36,6 +36,15 @@ class VehiclesServices {
             throw(error);
         };
     };
+    static async delete (id) {
+        try {
+            const vehicle = await Vehicles.findOne({where: {id}});
+            const result = await vehicle.destroy();
+            return vehicle;
+        } catch (error) {
+            throw(error);
+        };
+    };
 }
 
 module.exports = VehiclesServices

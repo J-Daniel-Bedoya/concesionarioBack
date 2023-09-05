@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-const Buyers = require('./buyers.models');
-const Users = require('./users.models')
-
-const initModels = () => {
-    Users;
-    Buyers;
-}
-
-module.exports = initModels
-=======
 const { Buyers, Price, Seles, Users, Vehicle } = require("./index");
 
 const initModels = () => {
@@ -62,4 +51,3 @@ const initModels = () => {
 };
 
 module.exports = initModels;
->>>>>>> 5706be64ad3595dc9b4b0017b96656914eb60b9b

@@ -13,6 +13,10 @@ const Vehicles = db.define('vehicles', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  fechaRegistro: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
   modelo: {
     type: DataTypes.STRING(100),
     allowNull: false,
@@ -26,7 +30,8 @@ const Vehicles = db.define('vehicles', {
     allowNull: false,
   },
   img: {
-    type: DataTypes.STRING(255),
+    type: DataTypes.STRING,
+    allowNull: false,
     comment: 'URL o ruta de la imagen',
   },
   kilometraje: {

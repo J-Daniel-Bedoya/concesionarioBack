@@ -2,12 +2,11 @@ const {Buyers} = require('./buyers.controllers');
 const {Price} = require('./price.controllers');
 const {Seles} = require('./seles.controllers');
 const {Users} = require('./users.controllers');
-const {Vehicle} = require('./vehicle.controllers');
+const {vehicleGet, vehiclePost, vehiclePath, vehicleDelete} = require('./vehicle.controllers');
 
 module.exports = {
-    Buyers,
-    Price,
-    Seles,
-    Users,
-    Vehicle
+    vehicleGet, 
+    vehiclePost, 
+    vehiclePath, 
+    vehicleDelete
 }

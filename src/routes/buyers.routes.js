@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const { getBuyers, getBuyer, ingressBuyer, updateBuyer, deleteBuyer} = require("../controllers");
+const { getBuyers, getBuyer, createBuyer, updateBuyer, deleteBuyer} = require("../controllers");
 
 
 router.get("/buyers", getBuyers);
 router.get("/buyers/:id", getBuyer);
-router.post("/buyers", ingressBuyer);
+router.post("/buyers", createBuyer);
 router.patch("/buyers/:id", updateBuyer);
 router.delete("/buyers/:id", deleteBuyer);
 

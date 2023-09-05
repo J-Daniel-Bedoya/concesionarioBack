@@ -1,6 +1,5 @@
 const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
-const Vehicles = require("./vehicles.models");
 const Buyers = require("./buyers.models");
 
 
@@ -12,6 +11,23 @@ const Sales = db.define(
       primaryKey: true,
       autoIncrement: true,
       allowNull: false,
+    },
+    modelo: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    precio: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    esNuevo: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+      allowNull: true
+    },
+    fechaRegistro: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     buyerId: {
       type: DataTypes.INTEGER,

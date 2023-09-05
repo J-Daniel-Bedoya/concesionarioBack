@@ -1,6 +1,5 @@
 const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
-const Sales = require("./sales.models");
 
     
 const Buyers = db.define(
@@ -26,14 +25,6 @@ const Buyers = db.define(
       allowNull: false,
       field: "numero_documento"
     },
-    saleId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      field: "sale_id",
-      references: {
-        model: Sales
-      }
-    }
   }, {
     timestamps: false,
   }

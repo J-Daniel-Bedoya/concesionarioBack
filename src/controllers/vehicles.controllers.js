@@ -30,6 +30,7 @@ const createVehicle = async (req, res, next) => {
     try {
         const data = req.body
         const result = await VehiclesServices.create(data);
+        console.log(result);
         res.status(200).json(result);
     } catch (error) {
         next({
@@ -69,20 +70,18 @@ const sellVehicle = async (req, res, next)=> {
     try {
         const { id } = req.params
         const vehicle = await VehiclesServices.get(id);
-        const {model, esNuevo, precio, tipo, fechaRegistro} = vehicle
+        const {modelo, esNuevo, precio, fechaRegistro} = vehicle
         const vehicleId = id
         const newBuyer = req.body;
         const buyerCreated = await BuyersServices.buyerPost(newBuyer);
         
-        if(buyerCreated && vehicleId){
+        if(buyerCreated && vehicle){
             const {id} = buyerCreated;
             const data = {
                 buyerId: id,
-                tipo,
-                model,
+                modelo,
                 esNuevo, 
                 precio,
-                fecha,
                 fechaRegistro
             }
             const result = await SalesServices.create(data)

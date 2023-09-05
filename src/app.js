@@ -19,7 +19,7 @@ db.authenticate()
   .then(() => console.log('Autenticación exitosa'))
   .catch((err) => console.log(err))
   
-db.sync({ force: true })
+db.sync({ force: false })
   .then(() => console.log('Conexión exitosa'))
   .catch((err) => console.log(err))
   
@@ -27,16 +27,11 @@ app.get('/', (req, res) => {
   res.status(200).json('Respuesta exitosa')
 }); 
 
-app.use('/api/v1', usersRoutes)
+app.use('/api/v1',  usersRoutes)
 app.use('/api/v1', authRoutes)
-// app.use('api/v1', priceRoutes)
 app.use('/api/v1', vehiclesRoutes)
-// app.use('api/v1', salesRoutes)
-// app.use('api/v1', buyersRoutes)
-// app.use('/api/v1', priceRoutes)
-app.use('/api/v1', priceRoutes)
-// app.use('/api/v1', vehiclesRoutes)
-// app.use('/api/v1', salesRoutes)
+app.use('/api/v1', salesRoutes)
+app.use('/api/v1',  priceRoutes)
 app.use('/api/v1', buyersRoutes)
 
   

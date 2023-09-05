@@ -28,7 +28,7 @@ const getBuyer = async (req, res, next) => {
         })
     }
 }
-const ingressBuyer = async (req, res, next) => {
+const createBuyer = async (req, res, next) => {
     try {
         const newBuyer = req.body;
         const result = await BuyersServices.buyerPost(newBuyer);
@@ -73,7 +73,7 @@ const deleteBuyer = async (req, res, next) => {
 module.exports = {
     getBuyers,
     getBuyer,
-    ingressBuyer,
+    createBuyer,
     updateBuyer,
     deleteBuyer
 }

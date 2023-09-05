@@ -32,6 +32,7 @@ const Sales = db.define(
       type: DataTypes.JSON,
       allowNull: true,
     },
+
   }, {
     timestamps: false,
   }

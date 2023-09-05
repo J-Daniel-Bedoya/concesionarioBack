@@ -16,7 +16,7 @@ class UsersServices {
     try {
       const result = await Users.findOne({
         where: { id },
-        attributes: ["id", "username", "email"]
+        attributes: ["id", "email", "password"]
       });
       return result;
     } catch (error) {

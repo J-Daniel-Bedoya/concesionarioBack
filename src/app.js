@@ -4,7 +4,8 @@ const cors = require("cors");
 const db = require('./utils/database');
 const handleError = require("./middlewares/error");
 const initModels = require("./models/initModels.models");
-const {usersRoutes, vehiclesRoutes, salesRoutes, buyersRoutes, priceRoutes} = require("./routes")
+const {usersRoutes, authRoutes ,vehiclesRoutes, salesRoutes, buyersRoutes, priceRoutes} = require("./routes")
+const authenticate = require("./middlewares/auth.middleware")
 
 const app = express();
 app.use(express.json());
@@ -27,6 +28,7 @@ app.get('/', (req, res) => {
 }); 
 
 app.use('/api/v1', usersRoutes)
+app.use('/api/v1', authRoutes)
 // app.use('api/v1', priceRoutes)
 // app.use('api/v1', vehiclesRoutes)
 // app.use('api/v1', salesRoutes)

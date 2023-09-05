@@ -10,9 +10,8 @@ const Vehicles = db.define('vehicles', {
     allowNull: false,
   },
   tipo: {
-    type: DataTypes.ENUM("moto", "carro"),
+    type: DataTypes.STRING,
     allowNull: false,
-    defaultValue: "carro",
   },
   modelo: {
     type: DataTypes.STRING(100),
@@ -83,6 +82,9 @@ const Vehicles = db.define('vehicles', {
     },
     comment: 'Número de velocidades de la moto (máximo 6)',
   },
+
+}, {
+  timestamps: false,
 })
 
 

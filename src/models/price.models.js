@@ -16,17 +16,9 @@ const Price = db.define(
       allowNull: false,
     },
     precio: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        min: {
-          args: [0],
-          msg: 'El precio debe ser mayor o igual a 0.',
-        },
-        max:{
-          args: [250000000]
-        },
-    }},
+        type: DataTypes.INTEGER,
+        allowNull: false
+    }
   }, {
     timestamps: false,
   }

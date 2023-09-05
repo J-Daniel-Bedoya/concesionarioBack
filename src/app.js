@@ -3,9 +3,17 @@ const morgan = require('morgan');
 const cors = require("cors");
 const db = require('./utils/database');
 const handleError = require("./middlewares/error");
+require("dotenv").config();
+
+const {
+  usersRoutes, 
+  authRoutes,
+  vehiclesRoutes, 
+  salesRoutes, 
+  buyersRoutes, 
+  priceRoutes} = require("./routes")
+
 const initModels = require("./models/initModels.models");
-const {usersRoutes, authRoutes ,vehiclesRoutes, salesRoutes, buyersRoutes, priceRoutes} = require("./routes")
-const authenticate = require("./middlewares/auth.middleware")
 
 const app = express();
 app.use(express.json());
@@ -22,20 +30,25 @@ db.authenticate()
 db.sync({ force: false })
   .then(() => console.log('Conexión exitosa'))
   .catch((err) => console.log(err))
-  
+
 app.get('/', (req, res) => {
-  res.status(200).json('Respuesta exitosa')
-}); 
-
-app.use('/api/v1',  usersRoutes)
+  res.status(200).json({
+    status: "Respuesta exitosa",
+    description: "Prueva esta API con SWAGGER en el siguiente ruta", 
+    link: process.env.HOST,
+  })
+});
+   
+ 
+app.use('/api/v1', usersRoutes)
 app.use('/api/v1', authRoutes)
-app.use('/api/v1', authenticate, vehiclesRoutes)
-app.use('/api/v1', authenticate, salesRoutes)
-app.use('/api/v1', authenticate, priceRoutes)
-// app.use('/api/v1', vehiclesRoutes)
-app.use('/api/v1', authenticate, buyersRoutes)
+app.use('/api/v1', vehiclesRoutes)
+app.use('/api/v1', salesRoutes)
+app.use('/api/v1', priceRoutes)
+app.use('/api/v1', buyersRoutes)
 
   
+
 app.use(handleError);
 
 module.exports = app;

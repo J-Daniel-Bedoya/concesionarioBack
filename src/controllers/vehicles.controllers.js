@@ -1,4 +1,4 @@
-const { VehiclesServices } = require("../services");
+const { VehiclesServices, BuyersServices, SalesServices } = require("../services");
 
 const getVehicles = async (req, res, next) => {
     try {
@@ -55,10 +55,41 @@ const editVehicle = async (req, res, next) => {
 const deleteVehicle = async (req, res, next)=> {
     try {
         const { id } = req.params
-        console.log(id);
         const result = await VehiclesServices.delete(id);
-        console.log(result);
         res.status(200).json(result);
+    } catch (error) {
+        next({
+            status: 400,
+            errorContent: error,
+            message: "Can't find info"
+        })
+    };
+};
+const sellVehicle = async (req, res, next)=> {
+    try {
+        const { id } = req.params
+        const vehicle = await VehiclesServices.get(id);
+        const {model, esNuevo, precio, tipo, fechaRegistro} = vehicle
+        const vehicleId = id
+        const newBuyer = req.body;
+        const buyerCreated = await BuyersServices.buyerPost(newBuyer);
+        
+        if(buyerCreated && vehicleId){
+            const {id} = buyerCreated;
+            const data = {
+                buyerId: id,
+                tipo,
+                model,
+                esNuevo, 
+                precio,
+                fecha,
+                fechaRegistro
+            }
+            const result = await SalesServices.create(data)
+            const vehicle = await VehiclesServices.delete(vehicleId);
+            res.status(201).json(result);
+        }
+
     } catch (error) {
         next({
             status: 400,
@@ -73,5 +104,6 @@ module.exports = {
   getVehicle,
   createVehicle,
   editVehicle,
-  deleteVehicle
+  deleteVehicle,
+  sellVehicle
 };

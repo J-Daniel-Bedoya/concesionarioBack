@@ -40,7 +40,7 @@ class VehiclesServices {
         try {
             const vehicle = await Vehicles.findOne({where: {id}});
             const result = await vehicle.destroy();
-            return vehicle;
+            return result;
         } catch (error) {
             throw(error);
         };

@@ -5,7 +5,6 @@ const { getBuyers, getBuyer, createBuyer, updateBuyer, deleteBuyer} = require(".
 
 router.get("/buyers", getBuyers);
 router.get("/buyers/:id", getBuyer);
-router.post("/buyers", createBuyer);
 router.patch("/buyers/:id", updateBuyer);
 router.delete("/buyers/:id", deleteBuyer);
 

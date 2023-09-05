@@ -13,14 +13,6 @@ const Sales = db.define(
       autoIncrement: true,
       allowNull: false,
     },
-    vehicleId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      field: "vehicle_id",
-      references:{
-        model: Vehicles
-      }
-    },
     buyerId: {
       type: DataTypes.INTEGER,
       allowNull: false,

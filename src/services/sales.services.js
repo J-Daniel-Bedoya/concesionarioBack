@@ -1,18 +1,23 @@
 const {Sales, Vehicles} = require('../models');
 
+
+
 class SalesServices {
 
     static async salesGet() {
         try {
+            const vehiclesData = await Vehicles.findAll();
             const result = await Sales.findAll({
-                // attributes: {
-                //     exclude: ["buyer_id", "vihicle_id"]
-                // },
-                // include: {
-                //     model: Vehicles,
-                //     as: "vehicle_id",
-                //     attributes: []
-                // }
+                attributes: {
+                    exclude: ["buyer_id", "vihicle_id"]
+                },
+                include: {
+                    model: vehiclesData,
+                    // as: "vehicleId",
+                    // attributes: {
+                    //     exclude: Vehicles.tipo === "carro" && ["cilindraje", "numVelocidades"]
+                    // }
+                }
             });
             return result;
         } catch (error) {

@@ -3,7 +3,7 @@ const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
 
 
-const Users = db.define('User', {
+const Users = db.define('user', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,

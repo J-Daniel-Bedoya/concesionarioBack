@@ -2,13 +2,12 @@ const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
 
 
-const Vehicles = db.define('Vehicles', {
-  vehiclesID: {
+const Vehicles = db.define('vehicles', {
+  id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
     allowNull: false,
-    field:"vehicles_id"
   },
   tipo: {
     type: DataTypes.ENUM("moto", "carro"),

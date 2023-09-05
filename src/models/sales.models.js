@@ -1,6 +1,7 @@
 const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
 const Vehicles = require("./vehicles.models");
+const Buyers = require("./buyers.models");
 
 
 const Sales = db.define(
@@ -12,20 +13,20 @@ const Sales = db.define(
       autoIncrement: true,
       allowNull: false,
     },
-    vehicleId: {
-      type: DataTypes.STRING,
+    vehiclesId: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      field: "vehicle_id",
+      field: "vehicles_id",
       references:{
         model: Vehicles
       }
     },
-    buyerId: {
-      type: DataTypes.STRING,
+    buyersId: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      field: "buyer_id",
-      references:{
-        model: Vehicles
+      field: "buyers_id",
+      references: {
+        model: Buyers
       }
     },
     fechaCompra: {

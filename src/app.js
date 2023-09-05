@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const cors = require("cors");
 const db = require('./utils/database');
 const handleError = require("./middlewares/error");
-const initModels = require("./models/initModels.models");
+const initModels = require("./models/init-Models.models");
 
 const app = express();
 app.use(express.json());

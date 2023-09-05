@@ -1,12 +1,14 @@
-const {Buyers} = require('./buyers.controllers');
-const {Price} = require('./price.controllers');
-const {Seles} = require('./seles.controllers');
-const {Users} = require('./users.controllers');
-const {vehicleGet, vehiclePost, vehiclePath, vehicleDelete} = require('./vehicle.controllers');
+const { getBuyers, getBuyer, ingressBuyer } = require('./buyers.controllers');
+const { getPrices, getPrice , createPrice } = require('./price.controllers');
+const { getSales, getSale, registerSale } = require('./sales.controllers');
+const { userLogin, userRegister } = require('./users.controllers');
+const { getVehicles,getVehicle, createVehicle, editVehicles, deleteVehicle } = require("./vehicles.controllers");
+
 
 module.exports = {
-    vehicleGet, 
-    vehiclePost, 
-    vehiclePath, 
-    vehicleDelete
+    getBuyers, getBuyer, ingressBuyer,
+    getPrices, getPrice , createPrice,
+    getSales, getSale, registerSale,
+    userLogin, userRegister,
+    getVehicles,getVehicle, createVehicle, editVehicles, deleteVehicle,
 }

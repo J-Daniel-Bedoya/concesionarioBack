@@ -1,13 +1,11 @@
-const express = require("express");
-const router = express.Router();
-const { priceGet, pricePost, pricePath, priceDelete } = require("../controllers");
+// const express = require("express");
+// const router = express.Router();
+// const { getPrices, getPrice , createPrice } = require("../controllers");
 
 
 
-router.get("/price", priceGet);
-router.get("/price/:id", priceGet);
-router.post("/price", pricePost);
-router.patch("/price", pricePath);
-router.delete("/price", priceDelete);
+// router.get("/price", getPrices);
+// router.get("/price/:id", getPrice);
+// router.post("/price", createPrice);
 
-module.exports = router;
+// module.exports = router;

@@ -1,13 +1,13 @@
 const buyersRoutes = require('./buyers.routes');
 const priceRoutes = require('./price.routes');
-const selesRoutes = require('./seles.routes');
-const usersRoutes = require('./users.');
-const vehicleRoutes = require('./vehicle.routes');
+const salesRoutes = require('./sales.routes');
+const usersRoutes = require('./users.routes');
+const vehiclesRoutes = require('./vehicles.routes');
 
 module.exports = {
     buyersRoutes,
     priceRoutes,
-    selesRoutes,
+    salesRoutes,
     usersRoutes,
-    vehicleRoutes
+    vehiclesRoutes
 }

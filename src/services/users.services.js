@@ -1,17 +1,12 @@
-const { Users, Cart } = require("../models");
+const { Users } = require("../models");
 
-
-class UserServices {
+class UsersServices {
   static async createUser(user) {
     try {
       
       const result = await Users.create(user);
-      
-      const createCart = await Cart.create({
-        totalPrice: 0,
-        userId: result.id
-      });
       return result;
+      
     } catch (error) {
       throw error;
     }
@@ -30,4 +25,4 @@ class UserServices {
   }
 }
 
-module.exports = UserServices;
+module.exports = UsersServices;

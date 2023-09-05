@@ -1,13 +1,13 @@
 const BuyersServices = require('./buyers.services');
 const PriceServices = require('./price.services');
-const SelesServices = require('./seles.services');
+const SalesServices = require('./sales.services');
 const UsersServices = require('./users.services');
-const VehicleServices = require('./vehicle.services');
+const VehiclesServices = require('./vehicles.services');
 
 module.exports = {
     BuyersServices,
     PriceServices,
-    SelesServices,
+    SalesServices,
     UsersServices,
-    VehicleServices
+    VehiclesServices
 }

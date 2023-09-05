@@ -1,13 +1,13 @@
 const Buyers = require('./buyers.models');
 const Price = require('./price.models');
-const Seles = require('./seles.models');
+const Sales = require('./sales.models');
 const Users = require('./users.models');
-const Vehicle = require('./vehicle.models');
+const Vehicles = require('./vehicles.models');
 
 module.exports = {
     Buyers,
     Price,
-    Seles,
+    Sales,
     Users,
-    Vehicle
+    Vehicles
 }

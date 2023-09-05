@@ -2,10 +2,10 @@ const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
 
 
-const Seles = db.define(
-  "seles",
+const Sales = db.define(
+  "Sales",
   {
-    id: {
+    compraID: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -16,10 +16,10 @@ const Seles = db.define(
       allowNull: false,
       field: "comprador_id"
     },
-    vehicleId: {
+    vehiclesId: {
       type: DataTypes.STRING,
       allowNull: false,
-      field: "vehicle_id"
+      field: "vehicles_id"
     },
     fechaCompra: {
       type: DataTypes.JSON,
@@ -30,4 +30,4 @@ const Seles = db.define(
   }
 );
 
-module.exports = Seles;
+module.exports = Sales;

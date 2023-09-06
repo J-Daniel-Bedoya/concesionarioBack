@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const cors = require("cors");
 const db = require('./utils/database');
 const handleError = require("./middlewares/error");
+const initModels = require("./models/initModels.models");
 require("dotenv").config();
 
 const {
@@ -13,7 +14,7 @@ const {
   buyersRoutes, 
   priceRoutes} = require("./routes")
 
-const initModels = require("./models/initModels.models");
+
 
 const app = express();
 app.use(express.json());

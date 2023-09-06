@@ -39,6 +39,11 @@ const swaggerDocs = (app, port) => {
 
   app.use("/api/v1/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+  app.get("/api/v1/docs.json", (req, res) => {
+    res.setHeader("ContentType", "application/json")
+    res.send(swaggerSpec)
+  })
+  console.log(`Documentacion disponible en https//:localhost:${port}/api/v1/docs}`);
 };
 
 module.exports = swaggerDocs; 

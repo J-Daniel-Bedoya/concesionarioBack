@@ -4,9 +4,9 @@
   "description": "prueba técnica que consta de la creación de una página para la administración de un concesionario",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "seed": "node src/seeders/seed.js",
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js",
+    "seed": "node ./src/seeders/seed.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Bedoya",

@@ -15,7 +15,7 @@ const { DataTypes } = require("sequelize");
  *           example: 1
  *         email:
  *           type: string
- *           example: josedaniel37@gmail.com
+ *           example: empleado@sincoayf.com
  *         password:
  *           type: string
  *           example: 1234
@@ -24,7 +24,7 @@ const { DataTypes } = require("sequelize");
  *       properties:
  *         email:
  *           type: string
- *           example: josedaniel37@gmail.com
+ *           example: empleado@sincoayf.com
  *         password:
  *           type: string
  *           example: 1234
@@ -34,14 +34,14 @@ const { DataTypes } = require("sequelize");
  *           example: 1
  *         email:
  *           type: string
- *           example: josedaniel37@gmail.com
+ *           example: empleado@sincoayf.com
  *         token:
  *           type: string
  *           example: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqb3NlZGFuaWVsMzdAZ21haWwuY29tIiwiaWF0IjoxNjkzOTYyNzQzLCJleHAiOjE2OTQwNDkxNDN9.1o9_l6cN2kTDjzYD6m-G_QmDVLjV49UNuxDfpXAROmk5Mq-DjGBx9LJqJAJZ1aMCoS92XLy-A77yAKZaaPEfKw
  *     registerLogin:
  *         email:
  *           type: string
- *           example: josedaniel37@gmail.com
+ *           example: empleado@sincoayf.com
  *         password:
  *           type: string
  *           example: 1234

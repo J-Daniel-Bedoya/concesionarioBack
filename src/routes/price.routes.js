@@ -157,4 +157,4 @@ router.post("/price", authenticate, createPrice);
 router.patch("/price/:id", authenticate, updatePrice);
 router.delete("/price/:id", authenticate, deletePrice);
 
-module.exports = router;
+module.exports = router; 

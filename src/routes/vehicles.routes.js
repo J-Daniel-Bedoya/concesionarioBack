@@ -163,6 +163,14 @@ const {
  *       - bearerAuth: []
  *     summary: Crea un nuevo comprador en Buyers
  *     tags: [Vehicles]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *           minimum: 1
+ *         description: vehicles Id
  *     requestBody:
  *       description: Este es un ejemplo de los datos que debes colocar
  *       required: true

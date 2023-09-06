@@ -11,6 +11,9 @@ const { DataTypes } = require("sequelize");
  *         id:
  *           type: number
  *           example: 1
+ *         tipo:
+ *           type: string
+ *           example: "Carro"
  *         modelo:
  *           type: string
  *           example: "2024 HR-V"
@@ -42,6 +45,10 @@ const Price = db.define(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+      allowNull: false
+    },
+    tipo: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     modelo: {

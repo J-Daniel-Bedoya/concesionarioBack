@@ -161,7 +161,7 @@ const {
  *   post: 
  *     security:
  *       - bearerAuth: []
- *     summary: Crea un nuevo comprador en Buyers
+ *     summary: Crea un nuevo registro de venta
  *     tags: [Vehicles]
  *     parameters:
  *       - in: path

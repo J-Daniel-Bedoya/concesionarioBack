@@ -13,25 +13,25 @@ const { DataTypes } = require("sequelize");
  *           example: 1
  *         nombreCompleto:
  *           type: string
- *           example: "2024 HR-V"
+ *           example: "John Doe"
  *         documento:
- *           type: int
- *           example: 234000
+ *           type: string
+ *           example: "CC"
  *         numDocumento:
  *           type: int
- *           example: 234000
+ *           example: 1023456789
  *     createBuyers:
  *       type: object
  *       properties:
  *         nombreCompleto:
  *           type: string
- *           example: "2024 HR-V"
+ *           example: "John Doe"
  *         documento:
- *           type: int
- *           example: 234000
+ *           type: string
+ *           example: "CC"
  *         numDocumento:
  *           type: int
- *           example: 234000
+ *           example: 1023456789
  */
     
 const Buyers = db.define(

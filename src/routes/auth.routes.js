@@ -6,7 +6,7 @@ const router = Router()
  * @openapi
  * /api/v1/auth/login:
  *   post:
- *     summary: Iniciar seción
+ *     summary: Iniciar sesión
  *     tags: [Login]
  *     requestBody:
  *       description: Este es un ejemplo de los datos que debes colocar
@@ -29,7 +29,7 @@ const router = Router()
  *                 data:
  *                   type: array
  *                   items:
- *                     $ref: "#/components/schemas/login"
+ *                     $ref: "#/components/schemas/users"
  */
 
 

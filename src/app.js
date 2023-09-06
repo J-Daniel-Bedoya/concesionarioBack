@@ -35,7 +35,7 @@ db.sync({ force: false })
 app.get('/', (req, res) => {
   res.status(200).json({
     status: "Respuesta exitosa",
-    description: "Prueva esta API con SWAGGER en el siguiente ruta", 
+    description: "Prueba esta API con SWAGGER en el siguiente ruta", 
     link: process.env.HOST,
   })
 });

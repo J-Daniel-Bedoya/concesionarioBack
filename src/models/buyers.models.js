@@ -1,7 +1,6 @@
 const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
 
-
 /**
  * @openapi
  * components:
@@ -34,7 +33,6 @@ const { DataTypes } = require("sequelize");
  *           type: int
  *           example: 234000
  */
-
     
 const Buyers = db.define(
   "buyers",

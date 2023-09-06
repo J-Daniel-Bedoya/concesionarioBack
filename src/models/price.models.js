@@ -23,6 +23,9 @@ const { DataTypes } = require("sequelize");
  *     createPrice:
  *       type: object
  *       properties:
+ *         tipo:
+ *           type: string
+ *           example: "Carro"
  *         modelo:
  *           type: string
  *           example: "2024 HR-V"

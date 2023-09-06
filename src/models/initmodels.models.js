@@ -1,4 +1,4 @@
-const { Buyers, Price, Sales, Vehicles } = require("./index");
+const { Users, Buyers, Price, Sales, Vehicles } = require("./index");
 
 const initModels = () => {
     Buyers.hasMany(Sales,  {as: 'buyer', foreignKey:'buyer_id'})
@@ -6,7 +6,8 @@ const initModels = () => {
 
     Price,
     Sales, 
-    Vehicles
+    Vehicles,
+    Users
 };
 
 module.exports = initModels;

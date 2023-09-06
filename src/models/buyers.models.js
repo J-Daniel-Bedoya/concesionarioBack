@@ -52,7 +52,7 @@ const Buyers = db.define(
       type: DataTypes.STRING(10),
       allowNull: false,
     },
-    numeDocumento: {
+    numDocumento: {
       type: DataTypes.INTEGER,
       allowNull: false,
       field: "numero_documento"

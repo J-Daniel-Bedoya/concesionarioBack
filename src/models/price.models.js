@@ -34,6 +34,7 @@ const { DataTypes } = require("sequelize");
  *           example: Elemento eliminado correctamente
  */
 
+
 const Price = db.define(
   "price",
   {

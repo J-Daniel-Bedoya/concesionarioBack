@@ -14,7 +14,7 @@ const router = Router()
  *       content:
  *         application/json:
  *           schema:
- *             $ref: "#/components/schemas/createLogin"
+ *             $ref: "#/components/schemas/registerLogin"
  *     responses:
  *       201:
  *         description: created

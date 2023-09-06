@@ -230,7 +230,7 @@ router.get("/vehicles/:id", authenticate, getVehicle);
 router.post("/vehicles", authenticate, createVehicle);
 router.patch("/vehicles/:id", authenticate, editVehicle);
 router.delete("/vehicles/:id", authenticate, deleteVehicle);
-router.post("/vehicles/:id/sale", authenticate, sellVehicle);
+router.post("/vehicles/:id/sales", authenticate, sellVehicle);
 router.post("/vehicles/sum", authenticate, sumVehicles);
 
 module.exports = router;
